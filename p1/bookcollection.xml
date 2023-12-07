@@ -1,0 +1,27 @@
+<library>
+  <book>
+    <title>The Great Gatsby</title>
+    <author>F. Scott Fitzgerald</author>
+    <year>1925</year>
+    <publisher>Charles Scribner's Sons</publisher>
+    <isbn>9780743273565</isbn>
+    <language>English</language>
+    <genre>Fiction</genre>
+    <pages>180</pages>
+    <price>10.99</price>
+  </book>
+  <book>
+    <title>To Kill a Mockingbird</title>
+    <author>Harper Lee</author>
+    <year>1960</year>
+    <publisher>J. B. Lippincott Co.</publisher>
+    <isbn>9780446310789</isbn>
+    <language>English</language>
+    <genre>Fiction</genre>
+    <pages>281</pages>
+    <price>7.99</price>
+  </book>
+</library>
+
+<!-- This XML document represents a library with two books: “The Great Gatsby” by F. Scott Fitzgerald and “To Kill a Mockingbird” by Harper Lee. Each book element includes details about the title, author, year of publication, publisher, ISBN, language, genre, number of pages, and price-->
+
