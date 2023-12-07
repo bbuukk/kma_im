@@ -1,0 +1,19 @@
+<!--https://www.cnet.com/tech/services-and-software/google-glass-gets-official-play-music-app/ -->
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="http://news.cnet.com/8301-1023_3-5761428 l-93/google-glass-gets-official-play-music-app/">
+    <dc:title>Google Glass gets official Play Music app</dc:title>
+    <dc:creator>CNET</dc:creator>
+    <dc:subject>Google Glass, Play Music app</dc:subject>
+    <dc:description>Google released an official version of its Play Music app for Google Glass on Monday.</dc:description>
+    <dc:publisher>CNET</dc:publisher>
+    <dc:date>2013-12-02 23:27:00</dc:date>
+    <dc:type>WebPage</dc:type>
+    <dc:format>text/html</dc:format>
+    <dc:identifier>http://news.cnet.com/8301-1023_3-5761428 l-93/google-glass-gets-official-play-music-app/</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:relation>https://www.cnet.com/tech/services-and-software/google-glass-gets-official-play-music-app/</dc:relation>
+    <dc:coverage>World</dc:coverage>
+  </rdf:Description>
+</rdf:RDF>

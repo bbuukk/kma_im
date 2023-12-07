@@ -1,0 +1,46 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:school="http://example.org/school#">
+
+  <rdf:Description rdf:about="http://example.org/school#School157">
+    <rdf:type rdf:resource="http://example.org/school#School"/>
+    <school:hasEmployee rdf:resource="http://example.org/school#Olena"/>
+    <school:hasEmployee rdf:resource="http://example.org/school#Dmytro"/>
+    <school:hasEmployee rdf:resource="http://example.org/school#Oleksandr"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/school#Olena">
+    <rdf:type rdf:resource="http://example.org/school#Teacher"/>
+    <school:teaches rdf:resource="http://example.org/school#Class1"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/school#Dmytro">
+    <rdf:type rdf:resource="http://example.org/school#Teacher"/>
+    <school:teaches rdf:resource="http://example.org/school#Class2"/>
+    <school:teaches rdf:resource="http://example.org/school#Class3"/>
+    <school:specializesIn rdf:resource="http://example.org/school#PhysicalEducation"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/school#Oleksandr">
+    <rdf:type rdf:resource="http://example.org/school#Teacher"/>
+    <rdf:type rdf:resource="http://example.org/school#Director"/>
+    <school:teaches rdf:resource="http://example.org/school#Class2"/>
+    <school:teaches rdf:resource="http://example.org/school#Class3"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/school#Class1">
+    <rdf:type rdf:resource="http://example.org/school#Class"/>
+    <school:hasStudent rdf:parseType="Resource"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/school#Class2">
+    <rdf:type rdf:resource="http://example.org/school#Class"/>
+    <school:hasStudent rdf:parseType="Resource"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/school#Class3">
+    <rdf:type rdf:resource="http://example.org/school#Class"/>
+    <school:hasStudent rdf:parseType="Resource"/>
+  </rdf:Description>
+
+</rdf:RDF>
