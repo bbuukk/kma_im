@@ -2,10 +2,10 @@ http://www.southampton.ac.uk
 
 Homepage: The URI for the homepage is http://www.southampton.ac.uk/. This is the main entry point of the website.
 
-About Us Page: The URI for the About Us page is http://www.southampton.ac.uk/about.page. This page provides information about the university’s history, mission, and values.
+About Us Page: The URI for the About Us page is http://www.southampton.ac.uk/about This page provides information about the university’s history, mission, and values.
 
-Courses Page: The URI for the Courses page is http://www.southampton.ac.uk/courses.page. This page lists all the courses offered by the university.
+Courses Page: The URI for the Courses page is http://www.southampton.ac.uk/courses. This page lists all the courses offered by the university.
 
-Contact Us Page: The URI for the Contact Us page is http://www.southampton.ac.uk/contact.page. This page provides contact information for the university.
+Contact Us Page: The URI for the Contact Us page is http://www.southampton.ac.uk/contact. This page provides contact information for the university.
 
-Individual Course Page: The URI for an individual course page follows the pattern http://www.southampton.ac.uk/courses/course-code.page, where course-code is replaced with the specific code for each course. For example, the URI for the Computer Science course might be http://www.southampton.ac.uk/courses/computer-science.page.
+Individual Course Page: The URI for an individual course page follows the pattern http://www.southampton.ac.uk/courses/course-code, where course-code is replaced with the specific code for each course. For example, the URI for the Computer Science course might be http://www.southampton.ac.uk/courses/computer-science.

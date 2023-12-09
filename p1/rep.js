@@ -23,3 +23,10 @@ console.log(
     .map((i) => i.toString(2).padStart(32, "0"))
     .join("")
 );
+
+// bohda@bc MINGW64 ~/uni/im/p1 (main)
+// $ node rep
+// UTF-8: 01000001
+// UTF-16: 0000000001000001
+// UTF-32: 000000000000000000000000010
+// 00001

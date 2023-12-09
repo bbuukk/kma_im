@@ -1,0 +1,31 @@
+@prefix ex: <http://example.com#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Person rdf:type rdfs:Class .
+ex:Actor rdfs:subClassOf ex:Person ;
+         rdf:type rdfs:Class ;
+         rdfs:range ex:stars .
+ex:stars rdf:type rdf:Property .
+ex:Director rdfs:subClassOf ex:Person ;
+            rdf:type rdfs:Class .
+
+ex:Movie rdf:type rdfs:Class .
+ex:title rdf:type rdf:Property .
+ex:year rdf:type rdf:Property .
+ex:name rdf:type rdf:Property .
+
+ex:jackson rdf:type ex:Director ;
+            ex:directs ex:hobbit ;
+            ex:name "Peter Jackson" .
+
+ex:hobbit rdf:type ex:Movie ;
+          ex:title "The Hobbit" ;
+          ex:year 2012 ;
+          ex:stars ex:mckellan, ex:freeman .
+
+ex:freeman rdf:type ex:Actor ;
+           ex:name "Martin Freeman" .
+
+ex:mckellan rdf:type ex:Actor ;
+            ex:name "Ian McKellan" .

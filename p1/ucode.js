@@ -79,3 +79,10 @@ testConversion(0x1f600); // should print "Conversion succeeded: 128512 -> 111100
 testConversion(0x41); // should print "Conversion succeeded: 65 -> 65 -> 65"
 testConversion(0x20ac); // should print "Conversion succeeded: 8364 -> 226, 130, 172 -> 8364"
 testConversion(0x1f600); // should print "Conversion succeeded: 128512 -> 240, 159, 152, 128 -> 128512"
+
+// Conversion succeeded: 65 -> 01000001 -> 65
+// Conversion succeeded: 8364 -> 11100010,10000010,10101100 -> 8364
+// Conversion succeeded: 128512 -> 11110000,10011111,10011000,10000000 -> 128512
+// Conversion succeeded: 65 -> 01000001 -> 65
+// Conversion succeeded: 8364 -> 11100010,10000010,10101100 -> 8364
+// Conversion succeeded: 128512 -> 11110000,10011111,10011000,10000000 -> 128512

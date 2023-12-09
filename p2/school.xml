@@ -1,46 +1,89 @@
+<?xml version="1.0"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:school="http://example.org/school#">
+         xmlns:ex="http://www.example.org/school#">
 
-  <rdf:Description rdf:about="http://example.org/school#School157">
-    <rdf:type rdf:resource="http://example.org/school#School"/>
-    <school:hasEmployee rdf:resource="http://example.org/school#Olena"/>
-    <school:hasEmployee rdf:resource="http://example.org/school#Dmytro"/>
-    <school:hasEmployee rdf:resource="http://example.org/school#Oleksandr"/>
+  <!-- Класи та підкласи -->
+  <rdf:Description rdf:about="#PrivateSchool157">
+    <rdf:type rdf:resource="http://www.example.org/school#PrivateSchool"/>
+    <rdfs:label>Приватна початкова школа № 157</rdfs:label>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://example.org/school#Olena">
-    <rdf:type rdf:resource="http://example.org/school#Teacher"/>
-    <school:teaches rdf:resource="http://example.org/school#Class1"/>
+  <rdf:Description rdf:about="#Teacher">
+    <rdf:type rdf:resource="http://www.example.org/school#Employee"/>
+    <rdfs:subClassOf rdf:resource="http://www.example.org/school#Staff"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://example.org/school#Dmytro">
-    <rdf:type rdf:resource="http://example.org/school#Teacher"/>
-    <school:teaches rdf:resource="http://example.org/school#Class2"/>
-    <school:teaches rdf:resource="http://example.org/school#Class3"/>
-    <school:specializesIn rdf:resource="http://example.org/school#PhysicalEducation"/>
+  <!-- Вчителі -->
+  <rdf:Description rdf:about="#OlenaHennadiivna">
+    <rdf:type rdf:resource="#Teacher"/>
+    <rdfs:label>Олена Геннадіївна</rdfs:label>
+    <ex:Teaches rdf:parseType="Collection">
+      <rdf:Description rdf:about="#TeachingSubject1">
+        <rdf:type rdf:resource="http://www.example.org/school#TeachingSubject"/>
+        <rdfs:label>Першокласники</rdfs:label>
+      </rdf:Description>
+    </ex:Teaches>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://example.org/school#Oleksandr">
-    <rdf:type rdf:resource="http://example.org/school#Teacher"/>
-    <rdf:type rdf:resource="http://example.org/school#Director"/>
-    <school:teaches rdf:resource="http://example.org/school#Class2"/>
-    <school:teaches rdf:resource="http://example.org/school#Class3"/>
+  <rdf:Description rdf:about="#DmitroOlehovych">
+    <rdf:type rdf:resource="#Teacher"/>
+    <rdfs:label>Дмитро Олегович</rdfs:label>
+    <ex:Teaches>
+      <rdf:Description rdf:about="#TeachingSubject2">
+        <rdf:type rdf:resource="http://www.example.org/school#TeachingSubject"/>
+        <rdfs:label>Другі та треті класи</rdfs:label>
+      </rdf:Description>
+    </ex:Teaches>
+    <ex:SpecializesIn>
+      <rdf:Description rdf:about="#TeachingSubject3">
+        <rdf:type rdf:resource="http://www.example.org/school#TeachingSubject"/>
+        <rdfs:label>Спорт</rdfs:label>
+      </rdf:Description>
+    </ex:SpecializesIn>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://example.org/school#Class1">
-    <rdf:type rdf:resource="http://example.org/school#Class"/>
-    <school:hasStudent rdf:parseType="Resource"/>
+  <!-- Директор -->
+  <rdf:Description rdf:about="#OleksandrPetrovych">
+    <rdf:type rdf:resource="http://www.example.org/school#Director"/>
+    <rdfs:label>Олександр Петрович</rdfs:label>
+    <ex:Teaches>
+      <rdf:Description rdf:about="#TeachingSubject2">
+        <rdf:type rdf:resource="http://www.example.org/school#TeachingSubject"/>
+        <rdfs:label>Другі та треті класи</rdfs:label>
+      </rdf:Description>
+    </ex:Teaches>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://example.org/school#Class2">
-    <rdf:type rdf:resource="http://example.org/school#Class"/>
-    <school:hasStudent rdf:parseType="Resource"/>
+  <!-- Фізичне виховання в третіх класах -->
+  <rdf:Description rdf:about="#PhysicalEducation">
+    <rdf:type rdf:resource="http://www.example.org/school#TeachingSubject"/>
+    <rdfs:label>Фізичне виховання</rdfs:label>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://example.org/school#Class3">
-    <rdf:type rdf:resource="http://example.org/school#Class"/>
-    <school:hasStudent rdf:parseType="Resource"/>
+  <!-- Студенти -->
+  <rdf:Description rdf:about="#Student">
+    <rdf:type rdf:resource="http://www.example.org/school#Student"/>
+    <rdfs:subClassOf rdf:resource="http://www.example.org/school#Person"/>
+  </rdf:Description>
+
+  <!-- Відношення між вчителями та класами -->
+  <rdf:Description rdf:about="#TeachingRelationship">
+    <rdf:type rdf:resource="http://www.example.org/school#TeachingRelationship"/>
+    <rdfs:domain rdf:resource="http://www.example.org/school#Teacher"/>
+    <rdfs:range rdf:resource="http://www.example.org/school#TeachingSubject"/>
+  </rdf:Description>
+
+  <!-- Властивості роботи в школі -->
+  <rdf:Description rdf:about="#Employment">
+    <rdf:type rdf:resource="http://www.example.org/school#Employment"/>
+    <rdfs:domain rdf:resource="http://www.example.org/school#Employee"/>
+    <rdfs:range rdf:resource="http://www.example.org/school#PrivateSchool"/>
+  </rdf:Description>
+
+  <!-- Інформація про школу -->
+  <rdf:Description rdf:about="http://www.example.org/school#PrivateSchool157">
+    <rdfs:label>Приватна початкова школа № 157</rdfs:label>
   </rdf:Description>
 
 </rdf:RDF>
