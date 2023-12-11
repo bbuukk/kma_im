@@ -1,0 +1,55 @@
+<!-- Якщо місце є популярним туристичним місцем, то воно має багато відвідувачів. -->
+Document(
+Prefix (travel <http://example.com/travel#>)
+Group(
+Forall ?X (
+If travel:popularTouristSpot(?X)
+Then travel:hasManyVisitors(?X)
+)
+)
+)
+
+<!-- Якщо готель є п’ятизірковим, то він має преміум-сервіс. -->
+Document(
+Prefix (travel <http://example.com/travel#>)
+Group(
+Forall ?X (
+If travel:fiveStarHotel(?X)
+Then travel:hasPremiumService(?X)
+)
+)
+)
+
+<!-- Якщо ресторан має Мішленовську зірку, то він вважається високоякісним. -->
+Document(
+Prefix (travel <http://example.com/travel#>)
+Group(
+Forall ?X (
+If travel:hasMichelinStar(?X)
+Then travel:isHighQuality(?X)
+)
+)
+)
+
+<!-- Якщо країна є частиною ЄС, то вона має візовий режим безвізу для громадян ЄС. -->
+Document(
+Prefix (travel <http://example.com/travel#>)
+Group(
+Forall ?X (
+If travel:isPartOfEU(?X)
+Then travel:hasVisaFreeRegimeForEUCitizens(?X)
+)
+)
+)
+
+<!-- Якщо пам’ятка є ЮНЕСКО, то вона важлива з точки зору світової спадщини. -->
+Document(
+Prefix (travel <http://example.com/travel#>)
+Group(
+Forall ?X (
+If travel:isUNESCOHeritage(?X)
+Then travel:isWorldHeritageImportant(?X)
+)
+)
+)
+

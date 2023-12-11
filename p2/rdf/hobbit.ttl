@@ -6,6 +6,7 @@ ex:Person rdf:type rdfs:Class .
 ex:Actor rdfs:subClassOf ex:Person ;
          rdf:type rdfs:Class ;
          rdfs:range ex:stars .
+         
 ex:stars rdf:type rdf:Property .
 ex:Director rdfs:subClassOf ex:Person ;
             rdf:type rdfs:Class .

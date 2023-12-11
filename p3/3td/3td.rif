@@ -1,0 +1,13 @@
+<!-- "All people are mortal, Socrates is a person" -->
+
+Document(
+Prefix (bio <http://example.com/biology#>)
+Prefix(phil <http://example.com/philosophers#>)
+Group(
+If bio:human(?x)
+Then bio:mortal(?x)
+)
+Group(
+bio:human(phil:Socrates)
+)
+)

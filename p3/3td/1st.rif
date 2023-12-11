@@ -1,0 +1,11 @@
+"All people are mortal"
+
+Document(
+Prefix (bio <http://example.com/biology#>)
+Group(
+Forall ?X (
+If bio:human(?X)
+Then bio:mortal(?X)
+)
+)
+)

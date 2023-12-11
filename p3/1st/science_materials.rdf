@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials/"
+     xml:base="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#MeltsAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#MeltsAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#hasHardness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#hasHardness"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Ceramic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Ceramic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Material"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Material -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Material"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Metal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Metal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Material"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Polymer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Polymer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Material"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Researcher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Researcher"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Aluminum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Aluminum"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Steel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Steel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Titanium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Titanium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Ceramic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Metal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Polymer"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Material"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Property"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bohda/ontologies/2023/11/scientific_materials#Researcher"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
